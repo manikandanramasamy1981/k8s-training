@@ -1,3 +1,3 @@
 FROM ubuntu:20.04
 
-ENTRYPOINT ["echo" "Hello World"]
+ENTRYPOINT ["echo","Hello World"]
