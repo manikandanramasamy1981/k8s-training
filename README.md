@@ -23,6 +23,18 @@ docker cp <src>  <Destination>
 # To copy file from host to container - can copy from host to container and container to host 
 curl localhost:8080 
 # To check the service running in 8080
+# COPY and ADD differences  - ADD  to copy from urls also 
+# COPY  - to copy from source to destination 
+# CMD and ENTRYPOINT   - CMD  -  when run with docker run , argument is overrridden  
+# CMD ["echo" , "Hello world"]
+# ENTRYPOINT ["echo" , "Hello India"]
+docker stop <container name / container id>
+# To stop the container 
+docker rm <container id>
+## To remove the container
+docker rmi <imageid>
+# To remove the image 
+
 
 
 
