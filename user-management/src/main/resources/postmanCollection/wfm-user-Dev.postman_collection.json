@@ -1,0 +1,1057 @@
+{
+	"info": {
+		"_postman_id": "dcd4e774-f77f-438e-9979-c4a0825de037",
+		"name": "wfm-user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2608105"
+	},
+	"item": [
+		{
+			"name": "addUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyId\": \"100\",\r\n  \"emailId\": \"mkbala.krishnan@gmail.com\",\r\n  \"firstName\": \"manikandan\",\r\n  \"lastName\": \"ramasamy\",\r\n  \"password\": \"test123\",\r\n  \"phoneNumber\": \"9789066952\",\r\n  \"status\": \"Active\",\r\n  \"userName\": \"mani123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/user/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 8,\r\n    \"companyId\": \"SBERECT\",\r\n    \"userName\": \"mani123\",\r\n    \"firstName\": \"Manikandan\",\r\n    \"lastName\": \"Ramasamy\",\r\n    \"password\": \"test123test\",\r\n    \"emailId\": \"manikandan.ramasamy@rediffmail.com\",\r\n    \"phoneNumber\": \"9789066952\",\r\n    \"status\": \"Active\",\r\n    \"createdBy\": null,\r\n    \"updatedBy\": null,\r\n    \"updatedDate\": \"2021-09-18T11:43:13.248+00:00\",\r\n    \"createdDate\": \"2021-09-18T11:43:13.248+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/user/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/user/v1/user/userId/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"user",
+						"userId",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/user/v1/user/companyCode/100/userId/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"user",
+						"companyCode",
+						"100",
+						"userId",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUserDetailsForACompany",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/user/v1/user/companyCode/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"user",
+						"companyCode",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserByUserId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/user/v1/user/userId/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"user",
+						"userId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserForACompanyForAUserId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/user/v1/user/companyCode/100/userId/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"user",
+						"companyCode",
+						"100",
+						"userId",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUserRole",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"erfProductId\": 1,\r\n  \"userRoleDescription\": \"SiteSupervisor\",\r\n  \"userRoleId\": 0,\r\n  \"userRoleName\": \"SiteSupervisor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/user/v1/userRole",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"userRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserRole",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userRoleId\": 19,\r\n    \"userRoleName\": \"Admin\",\r\n    \"userRoleDescription\": \"Admin\",\r\n    \"erfProductId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/user/v1/userRole",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"userRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserRole",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/user/v1/userRole/userRoleId/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"userRole",
+						"userRoleId",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveUserRole",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/user/v1/userRole/userRoleId/3/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"userRole",
+						"userRoleId",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUserModule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"moduleDescription\": \"Expense Management\",\r\n  \"moduleName\": \"Expense Management\",\r\n   \"erfProductId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/module",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"module"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateModule",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"moduleId\": 11,\r\n    \"moduleName\": \"Attendance Management\",\r\n    \"moduleDescription\": \"Attendance Management\",\r\n    \"erfProductId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/module",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"module"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveModule",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/module/moduleId/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"module",
+						"moduleId",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserModule",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/module/moduleId/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"module",
+						"moduleId",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addScreen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"erfModuleId\": 17,\r\n  \"screenDescription\": \"Edit Attendance\",\r\n  \"screenId\": 0,\r\n  \"screenName\": \"Edit Attendance\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/screen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"screen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateScreen",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"screenId\": 5,\r\n    \"screenName\": \"Edit Attendance\",\r\n    \"screenDescription\": \"Edit Attendance Screen\",\r\n    \"erfModuleId\": 12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/screen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"screen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScreenById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/screen/screenId/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"screen",
+						"screenId",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveScreen",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/screen/screenId/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"screen",
+						"screenId",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScreensForAModule",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/screen/module/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"screen",
+						"module",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addScreenAccess",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"screenAccess\": \"READ\",\r\n  \"screenAccessId\": 0,\r\n  \"screenId\": 9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/screenaccess",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"screenaccess"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateScreenAccess",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/screenaccess",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"screenaccess"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScreenAccessForAScreen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/screenaccess/screenId/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"screenaccess",
+						"screenId",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScreenAccessById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/screenaccess/screenAccessId/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"screenaccess",
+						"screenAccessId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveScreenAccessByScreenAccessId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/usermodule/v1/screenaccess/screenAccessId/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"usermodule",
+						"v1",
+						"screenaccess",
+						"screenAccessId",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assingModuleToRole",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"moduleId\": 17,\r\n  \"roleId\": 23,\r\n  \"roleToModuleId\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/userrolemap/v1/assignModule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"userrolemap",
+						"v1",
+						"assignModule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unassignModuleToRole",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"moduleId\": 17,\r\n  \"roleId\": 23,\r\n  \"roleToModuleId\": 9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/userrolemap/v1/unassignModule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"userrolemap",
+						"v1",
+						"unassignModule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assignRoleToScreenAccess",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"erfRoleId\": 23,\r\n  \"erfScreenAccessId\": 15,\r\n  \"roleToScreenAccessId\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/userrolemap/v1/assignScreenAccess",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"userrolemap",
+						"v1",
+						"assignScreenAccess"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unassignRoleToScreenAccess",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"erfRoleId\": 20,\r\n  \"erfScreenAccessId\": 10,\r\n  \"roleToScreenAccessId\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/userrolemap/v1/unassignScreenAccess",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"userrolemap",
+						"v1",
+						"unassignScreenAccess"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assignUserToUserRole",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 12,\r\n  \"userRoleId\": 23,\r\n  \"userToRoleId\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/userrolemap/v1/assignUserToUserRole",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"userrolemap",
+						"v1",
+						"assignUserToUserRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unassignUserToModule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 11,\r\n  \"userRoleId\": 23,\r\n  \"userToRoleId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/userrolemap/v1/unassignUserToUserRole",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"userrolemap",
+						"v1",
+						"unassignUserToUserRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRolesForAUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/userrolemap/v1/rolesForAUser/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"userrolemap",
+						"v1",
+						"rolesForAUser",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsersForAUserRole",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/userrolemap/v1/usersForARole/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"userrolemap",
+						"v1",
+						"usersForARole",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetModulesForARole",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/userrolemap/v1/modulesForARole/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"userrolemap",
+						"v1",
+						"modulesForARole",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRolesForAModule",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/userrolemap/v1/rolesForAModule/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"userrolemap",
+						"v1",
+						"rolesForAModule",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRolesForAScreenAccess",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/userrolemap/v1/rolesForAScreenAccess/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"userrolemap",
+						"v1",
+						"rolesForAScreenAccess",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScreenAccessesForUserRole",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/userrolemap/v1/screenAccessForARole/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"userrolemap",
+						"v1",
+						"screenAccessForARole",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticateUser",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true,
+					"host": true,
+					"content-length": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mani",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\" :\"mani\", \r\n  \"password\" :\"pass\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-234-199-27.ap-south-1.compute.amazonaws.com:8085/wfm-user/login/v1/authenticateUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"wfm-user",
+						"login",
+						"v1",
+						"authenticateUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

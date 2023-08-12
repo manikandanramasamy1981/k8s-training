@@ -1,0 +1,453 @@
+{
+	"info": {
+		"_postman_id": "545231d4-2e01-4540-aba6-05608af1b603",
+		"name": "wfm-user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "userRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"approvedBy\": \"Manikandan\",\r\n  \"approvedDate\": \"2021-08-09T07:54:58.585Z\",\r\n  \"companyCode\": \"STTECH\",\r\n  \"createdBy\": \"Manikandan\",\r\n  \r\n  \"requestedAmount\": 10000,\r\n  \"requestedBy\": \"Manikandan\",\r\n  \"requestedByDate\": \"2021-08-09T07:54:58.585Z\",\r\n  \"requesterComments\": \"For employee Payments\",\r\n  \"status\" : \"submitted\",\r\n  \"documentIds\": \"1\"\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/wfm-user/user/v1/userRequest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"userRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateuserRequest",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userRequestId\": 10,\r\n    \"companyCode\": \"STTECH\",\r\n    \"requestedBy\": \"Manikandan\",\r\n    \"requestedByDate\": \"2021-08-09T07:54:58.585+00:00\",\r\n    \"requesterComments\": \"For employee Payments\",\r\n    \"requestedAmount\": 10000,\r\n    \"status\": \"approved\",\r\n    \"approvedBy\": \"Manikandan\",\r\n    \"approvedDate\": \"2021-08-09T07:54:58.585+00:00\",\r\n    \"createdBy\": \"Manikandan\",\r\n    \"updatedBy\": null,\r\n    \"updatedDate\": \"2021-08-09T09:27:30.945+00:00\",\r\n    \"createdDate\": \"2021-08-09T09:27:30.945+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/wfm-user/user/v1/userRequest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"userRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAlluserRequestForACompany",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/wfm-user/user/v1/userRequest/STTECH",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"userRequest",
+						"STTECH"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveuserRequest",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/wfm-user/user/v1/userRequest/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"userRequest",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploadDocument",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/Users/Manikandan/Desktop/jenkins-error.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8084/wfm-user/document/v1/uploadDocument",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"wfm-user",
+						"document",
+						"v1",
+						"uploadDocument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "downloadDocument",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/wfm-user/document/v1/downloadDocument/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"wfm-user",
+						"document",
+						"v1",
+						"downloadDocument",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateDocument",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/Users/Manikandan/Desktop/JavaPath.bat"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8084/wfm-user/document/v1/updateDocument/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"wfm-user",
+						"document",
+						"v1",
+						"updateDocument",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploadMultipleDocuments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "documents",
+							"type": "file",
+							"src": [
+								"/C:/Users/Manikandan/Desktop/Credentials.txt",
+								"/C:/Users/Manikandan/Desktop/jenkins-error.txt",
+								"/C:/Users/Manikandan/Desktop/PenDrive.jpg"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8084/wfm-user/document/v1/uploadMultipleDocuments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"wfm-user",
+						"document",
+						"v1",
+						"uploadMultipleDocuments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteDocument",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/wfm-user/document/v1/removeDocument/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"wfm-user",
+						"document",
+						"v1",
+						"removeDocument",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finduserRequestsBetweenDatesAndStatus",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyCode\": \"STTECH\",\r\n  \"fromDate\": \"01-07-2021\",\r\n  \"status\": \"submitted\",\r\n  \"toDate\": \"30-08-2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/wfm-user/user/v1/userRequestBetweenDatesAndStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"userRequestBetweenDatesAndStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetuserRequestBetweenDates",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyCode\": \"STTECH\",\r\n  \"fromDate\": \"01-08-2021\",\r\n   \"toDate\": \"07-08-2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/wfm-user/user/v1/userRequestBetweenDates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"wfm-user",
+						"user",
+						"v1",
+						"userRequestBetweenDates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddExpenses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"companyCode\": \"STTECH\",\r\n    \"createdBy\": \"Manikandan\",\r\n    \"erfAdvReqId\": 1,\r\n    \"expenseAmount\": 1000,\r\n    \"expenseId\": 0,\r\n    \"expenseSubTypeInfo\": \"Employeeuser\"\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084//wfm-user/expense/v1/expenses/userRequestId/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"",
+						"wfm-user",
+						"expense",
+						"v1",
+						"expenses",
+						"userRequestId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateExpense",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"expenseId\": 5,\r\n        \"erfAdvReqId\": 1,\r\n        \"companyCode\": \"STTECH\",\r\n        \"expenseAmount\": 12000,\r\n        \"documentId\": null,\r\n        \"expenseType\": \"OtherExpenses\",\r\n        \"status\": \"Approved\",\r\n        \"expenseSubTypeInfo\": \"Employeeuser\",\r\n        \"createdBy\": \"Manikandan\",\r\n        \"updatedBy\": null,\r\n        \"updatedDate\": \"2021-08-16T07:29:22.696+00:00\",\r\n        \"createdDate\": \"2021-08-16T07:29:22.696+00:00\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084//wfm-user/expense/v1/expenses/userRequestId/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"",
+						"wfm-user",
+						"expense",
+						"v1",
+						"expenses",
+						"userRequestId",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeExpenses",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084//wfm-user/expense/v1/expenses/userRequestId/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"",
+						"wfm-user",
+						"expense",
+						"v1",
+						"expenses",
+						"userRequestId",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getExpensesForuserRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084//wfm-user/expense/v1//expenses/companyCode/STTECH/userRequestId/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"",
+						"wfm-user",
+						"expense",
+						"v1",
+						"",
+						"expenses",
+						"companyCode",
+						"STTECH",
+						"userRequestId",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
